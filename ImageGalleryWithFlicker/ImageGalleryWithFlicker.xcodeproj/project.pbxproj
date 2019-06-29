@@ -11,10 +11,10 @@
 		683CD31B22C6F4E10015E453 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 683CD31922C6F4E10015E453 /* Main.storyboard */; };
 		683CD31D22C6F4E20015E453 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 683CD31C22C6F4E20015E453 /* Assets.xcassets */; };
 		683CD32022C6F4E20015E453 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 683CD31E22C6F4E20015E453 /* LaunchScreen.storyboard */; };
-		683CD32A22C720C80015E453 /* PhotoGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683CD32922C720C80015E453 /* PhotoGalleryViewController.swift */; };
+		683CD32A22C720C80015E453 /* PhotoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683CD32922C720C80015E453 /* PhotoCollectionViewController.swift */; };
 		683CD32C22C724820015E453 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683CD32B22C724820015E453 /* PhotoDetailViewController.swift */; };
-		683CD33022C725370015E453 /* PhotoGarlleyCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683CD32E22C725370015E453 /* PhotoGarlleyCollectionCell.swift */; };
-		683CD33122C725370015E453 /* PhotoGarlleyCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683CD32F22C725370015E453 /* PhotoGarlleyCollectionCell.xib */; };
+		683CD33022C725370015E453 /* PhotoCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683CD32E22C725370015E453 /* PhotoCollectionCell.swift */; };
+		683CD33122C725370015E453 /* PhotoCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683CD32F22C725370015E453 /* PhotoCollectionCell.xib */; };
 		683CD33322C725BD0015E453 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683CD33222C725BD0015E453 /* Photo.swift */; };
 		683CD33522C72B4B0015E453 /* UIImageView+AsyncLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683CD33422C72B4B0015E453 /* UIImageView+AsyncLoad.swift */; };
 		683CD33A22C74F5D0015E453 /* FlickerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683CD33922C74F5D0015E453 /* FlickerResponse.swift */; };
@@ -29,10 +29,10 @@
 		683CD31C22C6F4E20015E453 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		683CD31F22C6F4E20015E453 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		683CD32122C6F4E20015E453 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		683CD32922C720C80015E453 /* PhotoGalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryViewController.swift; sourceTree = "<group>"; };
+		683CD32922C720C80015E453 /* PhotoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewController.swift; sourceTree = "<group>"; };
 		683CD32B22C724820015E453 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
-		683CD32E22C725370015E453 /* PhotoGarlleyCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGarlleyCollectionCell.swift; sourceTree = "<group>"; };
-		683CD32F22C725370015E453 /* PhotoGarlleyCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoGarlleyCollectionCell.xib; sourceTree = "<group>"; };
+		683CD32E22C725370015E453 /* PhotoCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionCell.swift; sourceTree = "<group>"; };
+		683CD32F22C725370015E453 /* PhotoCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoCollectionCell.xib; sourceTree = "<group>"; };
 		683CD33222C725BD0015E453 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		683CD33422C72B4B0015E453 /* UIImageView+AsyncLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+AsyncLoad.swift"; sourceTree = "<group>"; };
 		683CD33922C74F5D0015E453 /* FlickerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickerResponse.swift; sourceTree = "<group>"; };
@@ -103,8 +103,8 @@
 		683CD32D22C724F20015E453 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				683CD32E22C725370015E453 /* PhotoGarlleyCollectionCell.swift */,
-				683CD32F22C725370015E453 /* PhotoGarlleyCollectionCell.xib */,
+				683CD32E22C725370015E453 /* PhotoCollectionCell.swift */,
+				683CD32F22C725370015E453 /* PhotoCollectionCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -122,7 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				683CD32D22C724F20015E453 /* View */,
-				683CD32922C720C80015E453 /* PhotoGalleryViewController.swift */,
+				683CD32922C720C80015E453 /* PhotoCollectionViewController.swift */,
 				683CD32B22C724820015E453 /* PhotoDetailViewController.swift */,
 			);
 			path = Controller;
@@ -187,7 +187,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				683CD32022C6F4E20015E453 /* LaunchScreen.storyboard in Resources */,
-				683CD33122C725370015E453 /* PhotoGarlleyCollectionCell.xib in Resources */,
+				683CD33122C725370015E453 /* PhotoCollectionCell.xib in Resources */,
 				683CD31D22C6F4E20015E453 /* Assets.xcassets in Resources */,
 				683CD31B22C6F4E10015E453 /* Main.storyboard in Resources */,
 			);
@@ -201,8 +201,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				683CD32C22C724820015E453 /* PhotoDetailViewController.swift in Sources */,
-				683CD32A22C720C80015E453 /* PhotoGalleryViewController.swift in Sources */,
-				683CD33022C725370015E453 /* PhotoGarlleyCollectionCell.swift in Sources */,
+				683CD32A22C720C80015E453 /* PhotoCollectionViewController.swift in Sources */,
+				683CD33022C725370015E453 /* PhotoCollectionCell.swift in Sources */,
 				683CD34022C7ABA40015E453 /* UIButton+AsyncloadImage.swift in Sources */,
 				683CD31622C6F4E10015E453 /* AppDelegate.swift in Sources */,
 				683CD33322C725BD0015E453 /* Photo.swift in Sources */,

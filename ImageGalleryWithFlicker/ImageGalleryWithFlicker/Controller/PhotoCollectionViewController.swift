@@ -1,5 +1,5 @@
 //
-//  PhotoGalleryViewController.swift
+//  PhotoCollectionViewController.swift
 //  ImageGalleryWithFlicker
 //
 //  Created by hiroshi on 2019/06/29.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PhotoGalleryViewController: UIViewController {
+class PhotoCollectionViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -75,14 +75,14 @@ class PhotoGalleryViewController: UIViewController {
     }
 }
 
-extension PhotoGalleryViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension PhotoCollectionViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return photos?.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as? PhotoGarlleyCollectionCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as? PhotoCollectionCell else {
             fatalError("Failed to reuse cell")
         }
         
@@ -93,13 +93,13 @@ extension PhotoGalleryViewController: UICollectionViewDelegate, UICollectionView
     }
 }
 
-extension PhotoGalleryViewController: PhotoGarlleyCollectionCellDelegate {
+extension PhotoCollectionViewController: PhotoCollectionCellDelegate {
     func cellTapped(photo: Photo) {
         performSegue(withIdentifier: "toPhotoDetail", sender: photo)
     }
 }
 
-extension PhotoGalleryViewController: UISearchBarDelegate {
+extension PhotoCollectionViewController: UISearchBarDelegate {
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
         searchBar.endEditing(true)

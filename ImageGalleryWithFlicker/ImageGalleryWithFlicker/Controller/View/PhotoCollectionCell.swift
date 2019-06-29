@@ -8,17 +8,17 @@
 
 import UIKit
 
-protocol PhotoGarlleyCollectionCellDelegate {
+protocol PhotoCollectionCellDelegate {
     func cellTapped(photo: Photo)
 }
 
-class PhotoGarlleyCollectionCell: UICollectionViewCell {
+class PhotoCollectionCell: UICollectionViewCell {
 
     @IBOutlet weak var imageButton: UIButton!
     @IBOutlet weak var lodingIndicator: UIActivityIndicatorView!
     
     var photo: Photo?
-    var delegate: PhotoGarlleyCollectionCellDelegate?
+    var delegate: PhotoCollectionCellDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -43,7 +43,7 @@ class PhotoGarlleyCollectionCell: UICollectionViewCell {
         addSubview(view)
     }
     
-    func setUpWithPhotoData(photo: Photo, delegate: PhotoGarlleyCollectionCellDelegate){
+    func setUpWithPhotoData(photo: Photo, delegate: PhotoCollectionCellDelegate){
         self.photo = photo
         self.delegate = delegate
         

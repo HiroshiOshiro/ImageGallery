@@ -19,7 +19,7 @@ class PhotoGarlleyCollectionCell: UICollectionViewCell {
     }
     
     func setUpWithPhotoData(_ photo: Photo){
-        if let url = URL(string: photo.media) {
+        if let url = URL(string: photo.media["m"] ?? "") {
             image.loadImageAsynchronously(url: url, completion: {[weak self] (result) in
                 if result {
                     if let weakSelf = self { weakSelf.lodingIndicator.stopAnimating()

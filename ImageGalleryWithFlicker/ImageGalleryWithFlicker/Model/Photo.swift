@@ -11,7 +11,7 @@ import Foundation
 struct Photo: Codable {
     let title: String
     let link: String
-    let media: String
+    let media: [String: String]
     let dateTaken: Date
     let description: String
     let published: Date

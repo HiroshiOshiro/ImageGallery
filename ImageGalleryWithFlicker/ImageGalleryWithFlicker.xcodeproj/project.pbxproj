@@ -17,6 +17,8 @@
 		683CD33122C725370015E453 /* PhotoGarlleyCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683CD32F22C725370015E453 /* PhotoGarlleyCollectionCell.xib */; };
 		683CD33322C725BD0015E453 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683CD33222C725BD0015E453 /* Photo.swift */; };
 		683CD33522C72B4B0015E453 /* UIImageView+AsyncLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683CD33422C72B4B0015E453 /* UIImageView+AsyncLoad.swift */; };
+		683CD33A22C74F5D0015E453 /* FlickerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683CD33922C74F5D0015E453 /* FlickerResponse.swift */; };
+		683CD33C22C75A1C0015E453 /* FlickerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683CD33B22C75A1C0015E453 /* FlickerAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		683CD32F22C725370015E453 /* PhotoGarlleyCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoGarlleyCollectionCell.xib; sourceTree = "<group>"; };
 		683CD33222C725BD0015E453 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		683CD33422C72B4B0015E453 /* UIImageView+AsyncLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+AsyncLoad.swift"; sourceTree = "<group>"; };
+		683CD33922C74F5D0015E453 /* FlickerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickerResponse.swift; sourceTree = "<group>"; };
+		683CD33B22C75A1C0015E453 /* FlickerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickerAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				683CD33222C725BD0015E453 /* Photo.swift */,
+				683CD33922C74F5D0015E453 /* FlickerResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -90,6 +95,7 @@
 		683CD32822C702C70015E453 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				683CD33B22C75A1C0015E453 /* FlickerAPI.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -189,6 +195,8 @@
 				683CD31622C6F4E10015E453 /* AppDelegate.swift in Sources */,
 				683CD33322C725BD0015E453 /* Photo.swift in Sources */,
 				683CD33522C72B4B0015E453 /* UIImageView+AsyncLoad.swift in Sources */,
+				683CD33A22C74F5D0015E453 /* FlickerResponse.swift in Sources */,
+				683CD33C22C75A1C0015E453 /* FlickerAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

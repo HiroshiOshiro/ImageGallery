@@ -12,11 +12,14 @@ class PhotoGalleryViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        let api = FlickerAPI.init(query: nil)
+        api.requestPhotoData(completion: {(photos) in
+            // TODO infrate collection
+            print(photos.count)
+        })
     }
     
-
     /*
     // MARK: - Navigation
 

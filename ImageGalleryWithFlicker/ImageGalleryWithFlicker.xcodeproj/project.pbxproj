@@ -19,6 +19,7 @@
 		683CD33522C72B4B0015E453 /* UIImageView+AsyncLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683CD33422C72B4B0015E453 /* UIImageView+AsyncLoad.swift */; };
 		683CD33A22C74F5D0015E453 /* FlickerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683CD33922C74F5D0015E453 /* FlickerResponse.swift */; };
 		683CD33C22C75A1C0015E453 /* FlickerAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683CD33B22C75A1C0015E453 /* FlickerAPI.swift */; };
+		683CD34022C7ABA40015E453 /* UIButton+AsyncloadImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683CD33F22C7ABA40015E453 /* UIButton+AsyncloadImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		683CD33422C72B4B0015E453 /* UIImageView+AsyncLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+AsyncLoad.swift"; sourceTree = "<group>"; };
 		683CD33922C74F5D0015E453 /* FlickerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickerResponse.swift; sourceTree = "<group>"; };
 		683CD33B22C75A1C0015E453 /* FlickerAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlickerAPI.swift; sourceTree = "<group>"; };
+		683CD33F22C7ABA40015E453 /* UIButton+AsyncloadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+AsyncloadImage.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,11 +73,9 @@
 				683CD31522C6F4E10015E453 /* AppDelegate.swift */,
 				683CD32822C702C70015E453 /* Networking */,
 				683CD32722C700420015E453 /* Model */,
-				683CD33622C7301B0015E453 /* Extension */,
-				683CD32D22C724F20015E453 /* View */,
+				683CD34122C7C0020015E453 /* Controller */,
 				683CD31922C6F4E10015E453 /* Main.storyboard */,
-				683CD32922C720C80015E453 /* PhotoGalleryViewController.swift */,
-				683CD32B22C724820015E453 /* PhotoDetailViewController.swift */,
+				683CD33622C7301B0015E453 /* Extension */,
 				683CD31C22C6F4E20015E453 /* Assets.xcassets */,
 				683CD31E22C6F4E20015E453 /* LaunchScreen.storyboard */,
 				683CD32122C6F4E20015E453 /* Info.plist */,
@@ -113,8 +113,19 @@
 			isa = PBXGroup;
 			children = (
 				683CD33422C72B4B0015E453 /* UIImageView+AsyncLoad.swift */,
+				683CD33F22C7ABA40015E453 /* UIButton+AsyncloadImage.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		683CD34122C7C0020015E453 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				683CD32D22C724F20015E453 /* View */,
+				683CD32922C720C80015E453 /* PhotoGalleryViewController.swift */,
+				683CD32B22C724820015E453 /* PhotoDetailViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +203,7 @@
 				683CD32C22C724820015E453 /* PhotoDetailViewController.swift in Sources */,
 				683CD32A22C720C80015E453 /* PhotoGalleryViewController.swift in Sources */,
 				683CD33022C725370015E453 /* PhotoGarlleyCollectionCell.swift in Sources */,
+				683CD34022C7ABA40015E453 /* UIButton+AsyncloadImage.swift in Sources */,
 				683CD31622C6F4E10015E453 /* AppDelegate.swift in Sources */,
 				683CD33322C725BD0015E453 /* Photo.swift in Sources */,
 				683CD33522C72B4B0015E453 /* UIImageView+AsyncLoad.swift in Sources */,
@@ -343,13 +355,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SN5DS5FR82;
+				DEVELOPMENT_TEAM = 3JYXV9WJAZ;
 				INFOPLIST_FILE = ImageGalleryWithFlicker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ooshiro010.ImageGalleryWithFlicker;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.veldt.ImageGalleryWithFlicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -361,13 +374,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = SN5DS5FR82;
+				DEVELOPMENT_TEAM = 3JYXV9WJAZ;
 				INFOPLIST_FILE = ImageGalleryWithFlicker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ooshiro010.ImageGalleryWithFlicker;
+				PRODUCT_BUNDLE_IDENTIFIER = jp.veldt.ImageGalleryWithFlicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

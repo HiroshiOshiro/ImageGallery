@@ -31,7 +31,8 @@ class PhotoDetailViewController: UIViewController {
         if let url = URL(string: photo?.media["m"] ?? "") {
             imageView.loadImageAsynchronously(url: url, completion: {[weak self] (result) in
                 if result {
-                    if let weakSelf = self { weakSelf.loadingIndicator.stopAnimating()
+                    if let weakSelf = self {
+                        weakSelf.loadingIndicator.stopAnimating()
                     }
                 }
             })

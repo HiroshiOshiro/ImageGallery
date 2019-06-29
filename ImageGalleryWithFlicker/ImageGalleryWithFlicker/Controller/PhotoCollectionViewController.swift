@@ -86,9 +86,11 @@ extension PhotoCollectionViewController: UICollectionViewDelegate, UICollectionV
             fatalError("Failed to reuse cell")
         }
         
-        if let photo = self.photos?[indexPath.row] {
-            cell.setUpWithPhotoData(photo: photo, delegate: self)
-        }
+        // make sure indexPath.row is less than number of photos
+        if indexPath.row <= self.photos?.count ?? 0,
+            let photo = self.photos?[indexPath.row] {
+                cell.setUpWithPhotoData(photo: photo, delegate: self)
+            }
         return cell
     }
 }

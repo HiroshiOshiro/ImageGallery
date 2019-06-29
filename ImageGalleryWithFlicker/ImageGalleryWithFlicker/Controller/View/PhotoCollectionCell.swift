@@ -50,7 +50,8 @@ class PhotoCollectionCell: UICollectionViewCell {
         if let url = URL(string: photo.media["m"] ?? "") {
             imageButton.loadImageAsynchronously(url: url, completion: {[weak self] (result) in
                 if result {
-                    if let weakSelf = self { weakSelf.lodingIndicator.stopAnimating()
+                    if let weakSelf = self {
+                        weakSelf.lodingIndicator.stopAnimating()
                     }
                 }
             })

@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Axu-na-BI7">
-                                <rect key="frame" x="0.0" y="132" width="414" height="730"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="oDg-MG-ygh">
                                     <size key="itemSize" width="206" height="211"/>
@@ -72,6 +72,11 @@
                                     <constraint firstAttribute="height" constant="49" id="8Nm-Vx-TnK"/>
                                 </constraints>
                                 <items>
+                                    <barButtonItem systemItem="save" id="P3b-Wa-MD2">
+                                        <connections>
+                                            <action selector="saveButtonTapped:" destination="qxH-uy-wZ9" id="uP4-Wj-bED"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="ahp-Xb-wTr"/>
                                     <barButtonItem systemItem="action" id="kct-6z-FQ0"/>
                                 </items>

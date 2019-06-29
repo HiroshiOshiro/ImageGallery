@@ -12,7 +12,7 @@ class FlickerAPI {
     
     private let baseURL = "https://www.flickr.com/services/feeds/photos_public.gne/"
     
-    private let baseQuery = ["format": "json", "nojsoncallback": "1"]
+    private let commonQuery = ["format": "json", "nojsoncallback": "1"]
     
     var url: URL?
     
@@ -20,15 +20,18 @@ class FlickerAPI {
         url = setURL(query: query)
     }
     
-    func setURL(query: [String:String]?) -> URL {
+    /// set url with query parameters
+    private func setURL(query: [String:String]?) -> URL {
         var components = URLComponents(string: baseURL)!
         var queryItems = [URLQueryItem]()
         
-        for (key,value) in baseQuery {
+        // set common query parameters
+        for (key,value) in commonQuery {
             let item = URLQueryItem(name: key, value: value)
             queryItems.append(item)
         }
         
+        // set current query parameters
         if let additionalQueryItems = query {
             for (key, value) in additionalQueryItems {
                 let item = URLQueryItem(name: key, value: value)
@@ -37,10 +40,10 @@ class FlickerAPI {
         }
         
         components.queryItems = queryItems
-        print(components.url!)
         return components.url!
     }
     
+    /// request 
     func requestPhotoData(completion: @escaping ([Photo]) -> Void) {
         guard let url = self.url else {
             print("URL is nil!")
@@ -61,7 +64,6 @@ class FlickerAPI {
                 decoder.dateDecodingStrategy = .iso8601
                 do {
                     let photos = try decoder.decode(FlickerResponse.self, from: d)
-                    print(photos.title)
                     completion(photos.items)
                 } catch {
                     print("error: ", error.localizedDescription)

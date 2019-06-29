@@ -14,7 +14,7 @@ extension UIImageView {
     func loadImageAsynchronously(url: URL?, completion: ((_ result: Bool) -> Void)? = nil) {
         
         if url == nil {
-            completion?(false)
+            return
         }
         
         DispatchQueue.global().async {
@@ -25,12 +25,13 @@ extension UIImageView {
                         self.image = UIImage(data: data)
                         completion?(true)
                     } else {
+                        print("image data is nil!")
                         completion?(false)
                     }
                 }
             }
             catch {
-                completion?(false)
+                print(error.localizedDescription)
             }
         }
     }

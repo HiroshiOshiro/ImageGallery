@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PhotoGarlleyCollectionCell" customModule="ImageGalleryWithFlicker" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="153" height="153"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="153" height="153"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TAF-vu-lEN">
+                        <rect key="frame" x="0.0" y="0.0" width="153" height="153"/>
+                    </imageView>
+                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="DMs-vG-Rw8">
+                        <rect key="frame" x="66.5" y="66.5" width="20" height="20"/>
+                    </activityIndicatorView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="TAF-vu-lEN" secondAttribute="trailing" id="TnV-VZ-qHI"/>
+                <constraint firstItem="TAF-vu-lEN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="bDp-dv-h0E"/>
+                <constraint firstItem="TAF-vu-lEN" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="bt8-Rt-V6x"/>
+                <constraint firstItem="DMs-vG-Rw8" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="fBF-fm-Qo5"/>
+                <constraint firstAttribute="bottom" secondItem="TAF-vu-lEN" secondAttribute="bottom" id="mtg-9A-qf6"/>
+                <constraint firstItem="DMs-vG-Rw8" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="uIJ-nb-Tfk"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="153" height="153"/>
+            <connections>
+                <outlet property="image" destination="TAF-vu-lEN" id="ZKV-bd-QPj"/>
+                <outlet property="lodingIndicator" destination="DMs-vG-Rw8" id="2Qg-1k-vfe"/>
+            </connections>
+            <point key="canvasLocation" x="212.31884057971016" y="185.15625"/>
+        </collectionViewCell>
+    </objects>
+</document>

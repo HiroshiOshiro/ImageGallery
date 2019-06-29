@@ -13,6 +13,10 @@
 		683CD32022C6F4E20015E453 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 683CD31E22C6F4E20015E453 /* LaunchScreen.storyboard */; };
 		683CD32A22C720C80015E453 /* PhotoGalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683CD32922C720C80015E453 /* PhotoGalleryViewController.swift */; };
 		683CD32C22C724820015E453 /* PhotoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683CD32B22C724820015E453 /* PhotoDetailViewController.swift */; };
+		683CD33022C725370015E453 /* PhotoGarlleyCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683CD32E22C725370015E453 /* PhotoGarlleyCollectionCell.swift */; };
+		683CD33122C725370015E453 /* PhotoGarlleyCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 683CD32F22C725370015E453 /* PhotoGarlleyCollectionCell.xib */; };
+		683CD33322C725BD0015E453 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683CD33222C725BD0015E453 /* Photo.swift */; };
+		683CD33522C72B4B0015E453 /* UIImageView+AsyncLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683CD33422C72B4B0015E453 /* UIImageView+AsyncLoad.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		683CD32122C6F4E20015E453 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		683CD32922C720C80015E453 /* PhotoGalleryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGalleryViewController.swift; sourceTree = "<group>"; };
 		683CD32B22C724820015E453 /* PhotoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailViewController.swift; sourceTree = "<group>"; };
+		683CD32E22C725370015E453 /* PhotoGarlleyCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGarlleyCollectionCell.swift; sourceTree = "<group>"; };
+		683CD32F22C725370015E453 /* PhotoGarlleyCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PhotoGarlleyCollectionCell.xib; sourceTree = "<group>"; };
+		683CD33222C725BD0015E453 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		683CD33422C72B4B0015E453 /* UIImageView+AsyncLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+AsyncLoad.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +64,11 @@
 		683CD31422C6F4E10015E453 /* ImageGalleryWithFlicker */ = {
 			isa = PBXGroup;
 			children = (
+				683CD31522C6F4E10015E453 /* AppDelegate.swift */,
 				683CD32822C702C70015E453 /* Networking */,
 				683CD32722C700420015E453 /* Model */,
-				683CD31522C6F4E10015E453 /* AppDelegate.swift */,
+				683CD33622C7301B0015E453 /* Extension */,
+				683CD32D22C724F20015E453 /* View */,
 				683CD31922C6F4E10015E453 /* Main.storyboard */,
 				683CD32922C720C80015E453 /* PhotoGalleryViewController.swift */,
 				683CD32B22C724820015E453 /* PhotoDetailViewController.swift */,
@@ -72,6 +82,7 @@
 		683CD32722C700420015E453 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				683CD33222C725BD0015E453 /* Photo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -81,6 +92,23 @@
 			children = (
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		683CD32D22C724F20015E453 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				683CD32E22C725370015E453 /* PhotoGarlleyCollectionCell.swift */,
+				683CD32F22C725370015E453 /* PhotoGarlleyCollectionCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		683CD33622C7301B0015E453 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				683CD33422C72B4B0015E453 /* UIImageView+AsyncLoad.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				683CD32022C6F4E20015E453 /* LaunchScreen.storyboard in Resources */,
+				683CD33122C725370015E453 /* PhotoGarlleyCollectionCell.xib in Resources */,
 				683CD31D22C6F4E20015E453 /* Assets.xcassets in Resources */,
 				683CD31B22C6F4E10015E453 /* Main.storyboard in Resources */,
 			);
@@ -156,7 +185,10 @@
 			files = (
 				683CD32C22C724820015E453 /* PhotoDetailViewController.swift in Sources */,
 				683CD32A22C720C80015E453 /* PhotoGalleryViewController.swift in Sources */,
+				683CD33022C725370015E453 /* PhotoGarlleyCollectionCell.swift in Sources */,
 				683CD31622C6F4E10015E453 /* AppDelegate.swift in Sources */,
+				683CD33322C725BD0015E453 /* Photo.swift in Sources */,
+				683CD33522C72B4B0015E453 /* UIImageView+AsyncLoad.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

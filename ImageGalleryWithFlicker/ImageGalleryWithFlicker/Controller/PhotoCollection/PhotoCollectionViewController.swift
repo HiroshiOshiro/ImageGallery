@@ -10,16 +10,16 @@ import UIKit
 
 class PhotoCollectionViewController: UIViewController {
     
-    @IBOutlet weak var collectionView: UICollectionView!
+//    @IBOutlet weak var collectionView: UICollectionView!
+    
+    @IBOutlet weak var collectionView: PhotoCollectionView!
     
     var searchBar: UISearchBar!
     
     // photo data array
     var photos: [Photo]? {
         didSet {
-            DispatchQueue.main.async {
-                self.collectionView.reloadData()
-            }
+            collectionView.photos = photos
         }
     }
 
@@ -48,15 +48,17 @@ class PhotoCollectionViewController: UIViewController {
     }
     
     private func setUpCollection() {
-        collectionView.dataSource = self
-        collectionView.delegate = self
+        collectionView.setUpWithData(photos: photos, delegate: self)
         
-        let layout = UICollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: self.view.frame.width / 2, height: self.view.frame.width / 2)
-        layout.minimumInteritemSpacing = 0
-        layout.minimumLineSpacing = 0
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        collectionView.collectionViewLayout = layout
+//        collectionView.dataSource = self
+//        collectionView.delegate = self
+//
+//        let layout = UICollectionViewFlowLayout()
+//        layout.itemSize = CGSize(width: self.view.frame.width / 2, height: self.view.frame.width / 2)
+//        layout.minimumInteritemSpacing = 0
+//        layout.minimumLineSpacing = 0
+//        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+//        collectionView.collectionViewLayout = layout
     }
     
     
@@ -75,28 +77,34 @@ class PhotoCollectionViewController: UIViewController {
     }
 }
 
-extension PhotoCollectionViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return photos?.count ?? 0
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as? PhotoCollectionCell else {
-            fatalError("Failed to reuse cell")
-        }
-        
-        // make sure indexPath.row is less than number of photos
-        if indexPath.row <= self.photos?.count ?? 0,
-            let photo = self.photos?[indexPath.row] {
-                cell.setUpWithPhotoData(photo: photo, delegate: self)
-            }
-        return cell
-    }
-}
+//extension PhotoCollectionViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        return photos?.count ?? 0
+//    }
+//    
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        
+//        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PhotoCell", for: indexPath) as? PhotoCollectionCell else {
+//            fatalError("Failed to reuse cell")
+//        }
+//        
+//        // make sure indexPath.row is less than number of photos
+//        if indexPath.row <= self.photos?.count ?? 0,
+//            let photo = self.photos?[indexPath.row] {
+//                cell.setUpWithPhotoData(photo: photo, delegate: self)
+//            }
+//        return cell
+//    }
+//}
 
-extension PhotoCollectionViewController: PhotoCollectionCellDelegate {
-    func cellTapped(photo: Photo) {
+//extension PhotoCollectionViewController: PhotoCollectionCellDelegate {
+//    func cellTapped(photo: Photo) {
+//        performSegue(withIdentifier: "toPhotoDetail", sender: photo)
+//    }
+//}
+
+extension PhotoCollectionViewController: PhotoCollectionViewDelegate {
+    func photoSelected(photo: Photo) {
         performSegue(withIdentifier: "toPhotoDetail", sender: photo)
     }
 }

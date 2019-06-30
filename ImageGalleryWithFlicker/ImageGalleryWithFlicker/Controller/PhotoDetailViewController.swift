@@ -92,4 +92,17 @@ class PhotoDetailViewController: UIViewController {
         let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0] as NSURL
         return documentsURL
     }
+    
+    @IBAction func shareButtonTapped(_ sender: Any) {
+        // As of now, just link
+        let shareText = photo?.link
+        let activityItems = [shareText]
+        
+        // 初期化処理
+        let activityVC = UIActivityViewController(activityItems: activityItems as [Any], applicationActivities: nil)
+        
+        // UIActivityViewControllerを表示
+        self.present(activityVC, animated: true, completion: nil)
+    }
+    
 }

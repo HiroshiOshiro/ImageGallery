@@ -78,7 +78,11 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="ahp-Xb-wTr"/>
-                                    <barButtonItem systemItem="action" id="kct-6z-FQ0"/>
+                                    <barButtonItem systemItem="action" id="kct-6z-FQ0">
+                                        <connections>
+                                            <action selector="shareButtonTapped:" destination="qxH-uy-wZ9" id="XA4-sv-eyT"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TvU-Us-zxK">
